@@ -14,5 +14,6 @@ namespace CSharpProject.Data
         public DbSet<Book> Books { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Manager> Managers { get; set; }
+        public DbSet<Cart> Carts { get; set; }
     }
 }

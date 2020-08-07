@@ -10,6 +10,9 @@
     <Compile Update="Windows\BookWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\CartWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\CustomerWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,6 +31,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Windows\BookWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\CartWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\CustomerWindow.xaml">

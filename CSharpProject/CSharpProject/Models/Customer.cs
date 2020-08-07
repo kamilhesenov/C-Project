@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 
@@ -24,6 +25,8 @@ namespace CSharpProject.Models
         [StringLength(50)]
         [PasswordPropertyText]
         public string Password { get; set; }
+
+        public ICollection<Cart> Carts { get; set; }
 
         public override string ToString()
         {
