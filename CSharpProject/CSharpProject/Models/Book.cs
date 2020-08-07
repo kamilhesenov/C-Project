@@ -15,6 +15,7 @@ namespace CSharpProject.Models
         [Required]
         [Column(TypeName = "money")]
         public decimal Price { get; set; }
+        
         public override string ToString()
         {
             return Name;

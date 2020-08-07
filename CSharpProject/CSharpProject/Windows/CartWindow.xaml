@@ -17,6 +17,7 @@
                 <DataGridTextColumn Width="0.24*" Header="Geri Qaytarma vaxtı" Binding="{Binding ExpirationDate}"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="BtnDelete_Order" Content="Kitab Qaytarıldı" HorizontalAlignment="Left" Margin="-136,29,0,0" VerticalAlignment="Top" Height="35" Width="93" Click="BtnDelete_Order_Click"/>
 
     </Grid>
 </Window>

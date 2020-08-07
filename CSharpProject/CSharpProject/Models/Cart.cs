@@ -18,5 +18,7 @@ namespace CSharpProject.Models
         public int CustomerId { get; set; }
         public DateTime ExpirationDate { get; set; }
         public DateTime WithdrawalDate { get; set; }
+        public bool IsOrder { get; set; }
+
     }
 }

@@ -1,41 +1,50 @@
 ﻿using CSharpProject.Data;
 using CSharpProject.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+
 
 namespace CSharpProject.Windows
 {
-    /// <summary>
-    /// Interaction logic for CartWindow.xaml
-    /// </summary>
+    
     public partial class CartWindow : Window
     {
         private readonly LibrariyContext _context;
         private readonly Customer _customer;
-        public CartWindow(Customer customer)
+        private readonly DashboardWindow _dashboardWindow;
+        public CartWindow(Customer customer,DashboardWindow dashboardWindow)
         {
             InitializeComponent();
             _context = new LibrariyContext();
             _customer = customer;
+            _dashboardWindow = dashboardWindow;
             FillCartData();
         }
 
         //Fill Cart Data
         private void FillCartData()
         {
-            DgvCart.ItemsSource = _context.Carts.Include(x => x.Customer).ToList();
+            DgvCart.ItemsSource = _context.Carts.Where(x => x.IsOrder == false).Include(x => x.Customer).ToList();
                
+        }
+
+        //Delete Order
+        private void BtnDelete_Order_Click(object sender, RoutedEventArgs e)
+        {
+            Cart cart = (Cart)DgvCart.SelectedItem;
+
+            Book book = _context.Books.FirstOrDefault(x => x.Name == cart.Name);
+
+            book.Quantity = book.Quantity + 1; 
+
+            cart.IsOrder = true;
+
+            _context.SaveChanges();
+            FillCartData();
+            _dashboardWindow.FillBookData();
+            MessageBox.Show("Kitab qaytarıldı");
+            
         }
     }
 }

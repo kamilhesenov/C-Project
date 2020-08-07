@@ -1,23 +1,13 @@
 ﻿using CSharpProject.Data;
 using CSharpProject.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+
 
 namespace CSharpProject.Windows
 {
-    /// <summary>
-    /// Interaction logic for DashboardWindow.xaml
-    /// </summary>
+   
     public partial class DashboardWindow : Window
     {
         private readonly LibrariyContext _context;
@@ -33,11 +23,13 @@ namespace CSharpProject.Windows
         }
 
         //Fill Book Data
-        private void FillBookData()
+        public void FillBookData()
         {
+            DgvBook.ItemsSource = null;
             DgvBook.ItemsSource = _context.Books.ToList();
         }
 
+        //Add to Cart
         private void BtnAddToCart_Click(object sender, RoutedEventArgs e)
         {
             Book book = (Book)DgvBook.SelectedItem;
@@ -59,7 +51,7 @@ namespace CSharpProject.Windows
                 MessageBox.Show("hal hazırda bu kitabdan kitabxanada yoxdur");
                 return;
             }
-
+            
             book.Quantity = book.Quantity - 1;
 
             Cart cart = new Cart
@@ -73,13 +65,13 @@ namespace CSharpProject.Windows
 
             _context.Carts.Add(cart);
             _context.SaveChanges();
-
+            FillBookData();
             MessageBox.Show("Səbətə kitab əlavə edildi");
         }
 
         private void CartDashboard_Click(object sender, RoutedEventArgs e)
         {
-            CartWindow cartWindow = new CartWindow(_customer);
+            CartWindow cartWindow = new CartWindow(_customer,this);
             cartWindow.ShowDialog();
         }
     }
