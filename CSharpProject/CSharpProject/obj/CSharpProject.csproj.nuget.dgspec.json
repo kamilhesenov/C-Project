@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kamil\\Desktop\\CSharpProject\\CSharpProject\\CSharpProject.csproj": {}
+    "C:\\Users\\Kamil\\Desktop\\C-Project\\CSharpProject\\CSharpProject\\CSharpProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kamil\\Desktop\\CSharpProject\\CSharpProject\\CSharpProject.csproj": {
+    "C:\\Users\\Kamil\\Desktop\\C-Project\\CSharpProject\\CSharpProject\\CSharpProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kamil\\Desktop\\CSharpProject\\CSharpProject\\CSharpProject.csproj",
+        "projectUniqueName": "C:\\Users\\Kamil\\Desktop\\C-Project\\CSharpProject\\CSharpProject\\CSharpProject.csproj",
         "projectName": "CSharpProject",
-        "projectPath": "C:\\Users\\Kamil\\Desktop\\CSharpProject\\CSharpProject\\CSharpProject.csproj",
+        "projectPath": "C:\\Users\\Kamil\\Desktop\\C-Project\\CSharpProject\\CSharpProject\\CSharpProject.csproj",
         "packagesPath": "C:\\Users\\Kamil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kamil\\Desktop\\CSharpProject\\CSharpProject\\obj\\",
+        "outputPath": "C:\\Users\\Kamil\\Desktop\\C-Project\\CSharpProject\\CSharpProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kamil\\AppData\\Roaming\\NuGet\\NuGet.Config",

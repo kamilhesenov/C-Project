@@ -28,5 +28,11 @@ namespace CSharpProject.Windows
             CustomerWindow customerWindow = new CustomerWindow();
             customerWindow.ShowDialog();
         }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            LoginWindow loginWindow = new LoginWindow();
+            loginWindow.ShowDialog();
+        }
     }
 }

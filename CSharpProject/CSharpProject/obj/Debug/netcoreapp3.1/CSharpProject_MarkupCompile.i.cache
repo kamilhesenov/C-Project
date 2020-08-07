@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Kamil\Desktop\CSharpProject\CSharpProject\obj\Debug\netcoreapp3.1\
+C:\Users\Kamil\Desktop\C-Project\CSharpProject\CSharpProject\obj\Debug\netcoreapp3.1\
 CSharpProject
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\Kamil\Desktop\CSharpProject\CSharpProject\App.xaml
-4-140456568
+C:\Users\Kamil\Desktop\C-Project\CSharpProject\CSharpProject\App.xaml
+6-97310117
 
-151806806415
+17-779942286
 210-1450277352
-Windows\BookWindow.xaml;Windows\CustomerWindow.xaml;Windows\HomePageWindow.xaml;Windows\ManagerWindow.xaml;
+Windows\BookWindow.xaml;Windows\CustomerWindow.xaml;Windows\DashboardWindow.xaml;Windows\HomePageWindow.xaml;Windows\LoginWindow.xaml;Windows\ManagerWindow.xaml;
 
-True
+False
 
