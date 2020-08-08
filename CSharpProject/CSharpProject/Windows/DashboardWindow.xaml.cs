@@ -69,6 +69,7 @@ namespace CSharpProject.Windows
             MessageBox.Show("Səbətə kitab əlavə edildi");
         }
 
+        //Open CartDashboard
         private void CartDashboard_Click(object sender, RoutedEventArgs e)
         {
             CartWindow cartWindow = new CartWindow(_customer,this);

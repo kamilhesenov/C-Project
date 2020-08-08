@@ -1,6 +1,8 @@
 ﻿using CSharpProject.Data;
 using CSharpProject.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 
@@ -45,6 +47,43 @@ namespace CSharpProject.Windows
             _dashboardWindow.FillBookData();
             MessageBox.Show("Kitab qaytarıldı");
             
+        }
+
+        //Search Customer
+        private void BtnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            List<Cart> carts = TxtSearch.Text == "" ?  _context.Carts.Where(x => x.IsOrder == false).Include(x => x.Customer).ToList() : 
+            _context.Carts.Include(x=>x.Customer).Where(x => x.IsOrder == false && x.Customer.Name.ToLower().Contains(TxtSearch.Text.ToLower())).ToList();
+            DgvCart.ItemsSource = carts;
+
+        }
+
+        //DelayTime
+        private void BtnDelayTime_Click(object sender, RoutedEventArgs e)
+        {
+           
+            Cart cart = (Cart)DgvCart.SelectedItem;
+
+            if (cart == null) return;
+
+            if (DtpDaleyTime.SelectedDate == null) return;
+            
+            
+            DateTime date = (DateTime)DtpDaleyTime.SelectedDate;
+
+            if (date < cart.ExpirationDate) return;
+            
+            cart.DelayTime = date;
+
+            int day = date.Day - cart.ExpirationDate.Day;
+            int dayCount = cart.ExpirationDate.Day - cart.WithdrawalDate.Day;
+            decimal defaultPrice = cart.Price / dayCount;
+            decimal delayPrice = defaultPrice * 0.005M * day;
+
+            cart.Price += delayPrice;
+
+            cart.IsOrder = true;
+            _context.SaveChanges();
         }
     }
 }
