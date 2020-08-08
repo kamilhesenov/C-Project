@@ -1,0 +1,32 @@
+﻿<Window x:Class="CSharpProject.Windows.RaportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharpProject.Windows"
+        mc:Ignorable="d"
+        Title="RaportWindow" Height="450" Width="800">
+    <Grid>
+        <Grid Margin="136,0,0,0">
+            <DataGrid x:Name="DgvRaport" CanUserAddRows="False" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="0.10*" Header="Id" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Width="0.10*" Header="Adı" Binding="{Binding Name}"/>
+                    <DataGridTextColumn Width="0.10*" Header="Qiyməti" Binding="{Binding Price}"/>
+                    <DataGridTextColumn Width="0.14*" Header="Müştəri Adı" Binding="{Binding Customer.Name}"/>
+                    <DataGridTextColumn Width="0.18*" Header="Götürmə Vaxtı" Binding="{Binding WithdrawalDate}"/>
+                    <DataGridTextColumn Width="0.18*" Header="Geri Qaytarma vaxtı" Binding="{Binding ExpirationDate}"/>
+                    <DataGridTextColumn Width="0.18*" Header="Gecikmə Vaxtı" Binding="{Binding DelayTime}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <DatePicker x:Name="DtpStartTime" HorizontalAlignment="Left" Margin="17,43,0,0" VerticalAlignment="Top" FirstDayOfWeek="Monday"/>
+        <Label x:Name="LblStartTime" Content="StartTime" HorizontalAlignment="Left" Margin="44,15,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="DtpEndTime" HorizontalAlignment="Left" Margin="13,100,0,0" VerticalAlignment="Top" FirstDayOfWeek="Monday"/>
+        <Label x:Name="LblEndTime" Content="EndTime" HorizontalAlignment="Left" Margin="40,72,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BtnSerachInterval" Content="Search Interval" HorizontalAlignment="Left" Margin="14,141,0,0" VerticalAlignment="Top" Height="39" Width="102" Click="BtnSerachInterval_Click"/>
+        <Button x:Name="BtnAllData" Content="Show All Data" HorizontalAlignment="Left" Margin="12,195,0,0" VerticalAlignment="Top" Height="39" Width="102" Click="BtnAllData_Click"/>
+        <Button x:Name="BtnExport" Content="Export" HorizontalAlignment="Left" Margin="9,257,0,0" VerticalAlignment="Top" Height="39" Width="102" Click="BtnExport_Click"/>
+
+    </Grid>
+</Window>

@@ -38,5 +38,12 @@ namespace CSharpProject.Windows
             LoginWindow loginWindow = new LoginWindow();
             loginWindow.ShowDialog();
         }
+
+        //Open ReportWindow
+        private void Report_Click(object sender, RoutedEventArgs e)
+        {
+            RaportWindow raportWindow = new RaportWindow();
+            raportWindow.ShowDialog();
+        }
     }
 }

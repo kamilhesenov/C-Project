@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharpProject.Windows"
         mc:Ignorable="d"
-        Title="HomePageWindow" Height="450" Width="400" WindowStartupLocation="CenterScreen">
+        Title="HomePageWindow" Height="550" Width="400" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,2,0">
         <Button x:Name="CreateManager" Content="CreateManager" HorizontalAlignment="Center" Margin="0,33,0,0" VerticalAlignment="Top" Height="61" Width="318" Click="CreateManager_Click"/>
         <Button x:Name="CreateBook" Content="CreateBook" HorizontalAlignment="Center" Margin="0,119,0,0" VerticalAlignment="Top" Height="61" Width="318" Click="CreateBook_Click"/>
         <Button x:Name="CreateCustomer" Content="CreateCustomer" HorizontalAlignment="Left" Margin="37,203,0,0" VerticalAlignment="Top" Height="61" Width="318" Click="CreateCustomer_Click"/>
         <Button x:Name="Login" Content="Login" HorizontalAlignment="Left" Margin="37,281,0,0" VerticalAlignment="Top" Height="61" Width="318" Click="Login_Click"/>
+        <Button x:Name="Report" Content="Reports" HorizontalAlignment="Left" Margin="33,363,0,0" VerticalAlignment="Top" Height="61" Width="318" Click="Report_Click"/>
 
     </Grid>
 </Window>

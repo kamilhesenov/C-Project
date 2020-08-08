@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\Kamil\Desktop\C-Project\CSharpProject\CSharpProject\App.xaml
-71564588061
+91779336504
 
-29-1311505938
-210-1450277352
-Windows\BookWindow.xaml;Windows\CartWindow.xaml;Windows\CustomerWindow.xaml;Windows\DashboardWindow.xaml;Windows\HomePageWindow.xaml;Windows\LoginWindow.xaml;Windows\ManagerWindow.xaml;
+311950318549
+214-302434594
+Windows\BookWindow.xaml;Windows\CartWindow.xaml;Windows\CustomerWindow.xaml;Windows\DashboardWindow.xaml;Windows\HomePageWindow.xaml;Windows\LoginWindow.xaml;Windows\ManagerWindow.xaml;Windows\RaportWindow.xaml;Windows\TabMenuWindow.xaml;
 
 False
 
