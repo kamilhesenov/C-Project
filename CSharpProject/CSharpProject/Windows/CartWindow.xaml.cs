@@ -22,6 +22,7 @@ namespace CSharpProject.Windows
             _customer = customer;
             _dashboardWindow = dashboardWindow;
             FillCartData();
+            
         }
 
         //Fill Cart Data
@@ -61,18 +62,17 @@ namespace CSharpProject.Windows
         //DelayTime
         private void BtnDelayTime_Click(object sender, RoutedEventArgs e)
         {
-           
             Cart cart = (Cart)DgvCart.SelectedItem;
 
             if (cart == null) return;
 
             if (DtpDaleyTime.SelectedDate == null) return;
-            
-            
+
+
             DateTime date = (DateTime)DtpDaleyTime.SelectedDate;
 
             if (date < cart.ExpirationDate) return;
-            
+
             cart.DelayTime = date;
 
             int day = date.Day - cart.ExpirationDate.Day;
@@ -84,6 +84,9 @@ namespace CSharpProject.Windows
 
             cart.IsOrder = true;
             _context.SaveChanges();
+
         }
+
+       
     }
 }

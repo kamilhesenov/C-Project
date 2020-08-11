@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharpProject.Windows"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="450" Width="400">
+        Title="LoginWindow" Height="450" Width="400" WindowState="Maximized">
     <Grid Margin="0,0,2,0">
         <Label x:Name="LblEmail" Content="Email *" HorizontalAlignment="Left" Margin="158,34,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TxtEmail" HorizontalAlignment="Left" Margin="84,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191"/>

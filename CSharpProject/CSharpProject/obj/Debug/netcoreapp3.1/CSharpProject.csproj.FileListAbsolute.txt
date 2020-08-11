@@ -115,11 +115,12 @@ C:\Users\Kamil\Desktop\C-Project\CSharpProject\CSharpProject\obj\Debug\netcoreap
 C:\Users\Kamil\Desktop\C-Project\CSharpProject\CSharpProject\obj\Debug\netcoreapp3.1\Windows\DashboardWindow.baml
 C:\Users\Kamil\Desktop\C-Project\CSharpProject\CSharpProject\obj\Debug\netcoreapp3.1\Windows\CartWindow.g.cs
 C:\Users\Kamil\Desktop\C-Project\CSharpProject\CSharpProject\obj\Debug\netcoreapp3.1\Windows\CartWindow.baml
-C:\Users\Kamil\Desktop\C-Project\CSharpProject\CSharpProject\obj\Debug\netcoreapp3.1\Windows\TabMenuWindow.g.cs
-C:\Users\Kamil\Desktop\C-Project\CSharpProject\CSharpProject\obj\Debug\netcoreapp3.1\Windows\TabMenuWindow.baml
 C:\Users\Kamil\Desktop\C-Project\CSharpProject\CSharpProject\obj\Debug\netcoreapp3.1\Windows\RaportWindow.g.cs
 C:\Users\Kamil\Desktop\C-Project\CSharpProject\CSharpProject\obj\Debug\netcoreapp3.1\Windows\RaportWindow.baml
 C:\Users\Kamil\Desktop\C-Project\CSharpProject\CSharpProject\bin\Debug\netcoreapp3.1\ClosedXML.dll
 C:\Users\Kamil\Desktop\C-Project\CSharpProject\CSharpProject\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
 C:\Users\Kamil\Desktop\C-Project\CSharpProject\CSharpProject\bin\Debug\netcoreapp3.1\ExcelNumberFormat.dll
+C:\Users\Kamil\Desktop\C-Project\CSharpProject\CSharpProject\bin\Debug\netcoreapp3.1\MaterialDesignColors.dll
+C:\Users\Kamil\Desktop\C-Project\CSharpProject\CSharpProject\bin\Debug\netcoreapp3.1\MaterialDesignThemes.Wpf.dll
+C:\Users\Kamil\Desktop\C-Project\CSharpProject\CSharpProject\obj\Debug\netcoreapp3.1\App.baml
 C:\Users\Kamil\Desktop\C-Project\CSharpProject\CSharpProject\obj\Debug\netcoreapp3.1\CSharpProject.csproj.CoreCompileInputs.cache

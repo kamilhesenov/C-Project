@@ -1,5 +1,6 @@
 ﻿using CSharpProject.Data;
 using CSharpProject.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Windows;
@@ -18,7 +19,7 @@ namespace CSharpProject.Windows
             _customer = customer;
             _context = new LibrariyContext();
             FillBookData();
-
+            FillTabs();
 
         }
 
@@ -75,5 +76,38 @@ namespace CSharpProject.Windows
             CartWindow cartWindow = new CartWindow(_customer,this);
             cartWindow.ShowDialog();
         }
+
+        //Tab Menu
+        private void FillTabs()
+        {
+            DgvTodayReturn.ItemsSource = _context.Carts.Include(x => x.Customer)
+            .Where(x=> x.ExpirationDate.Date == DateTime.Now.Date).Select(x=> new { 
+            Id = x.Id,
+            Name = x.Name,
+            CustomeName = x.Customer.Name,
+            Phone = x.Customer.Phone,
+            Count = x.Customer.Carts.Count
+            }).ToList();
+
+            DgvTommorrowReturn.ItemsSource = _context.Carts.Include(x => x.Customer)
+           .Where(x=> x.ExpirationDate.Date == DateTime.Now.Date.AddDays(1)).Select(x => new {
+               Id = x.Id,
+               Name = x.Name,
+               CustomeName = x.Customer.Name,
+               Phone = x.Customer.Phone,
+               Count = x.Customer.Carts.Count
+           }).ToList();
+
+            DgvDeleyTime.ItemsSource = _context.Carts.Include(x => x.Customer)
+              .Where(x=>x.ExpirationDate.Date < DateTime.Now.Date).Select(x => new {
+                  Id = x.Id,
+                  Name = x.Name,
+                  CustomeName = x.Customer.Name,
+                  Phone = x.Customer.Phone,
+                  Count = x.Customer.Carts.Count
+              }).ToList();
+        }
+
+      
     }
 }

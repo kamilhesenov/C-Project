@@ -111,8 +111,8 @@ namespace CSharpProject.Windows
                     worksheet.Cell("B" + row).Value = cart.Name;
                     worksheet.Cell("C" + row).Value = cart.Price + " azn";
                     worksheet.Cell("D" + row).Value = cart.Customer.Name;
-                    worksheet.Cell("E" + row).Value = cart.ExpirationDate;
-                    worksheet.Cell("F" + row).Value = cart.WithdrawalDate;
+                    worksheet.Cell("E" + row).Value = cart.WithdrawalDate;
+                    worksheet.Cell("F" + row).Value = cart.ExpirationDate;
                     worksheet.Cell("G" + row).Value = cart.DelayTime;
 
                     row++;

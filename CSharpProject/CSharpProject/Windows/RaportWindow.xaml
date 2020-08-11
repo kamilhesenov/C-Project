@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharpProject.Windows"
         mc:Ignorable="d"
-        Title="RaportWindow" Height="450" Width="800">
+        Title="RaportWindow" Height="450" Width="800" WindowState="Maximized">
     <Grid>
         <Grid Margin="136,0,0,0">
-            <DataGrid x:Name="DgvRaport" CanUserAddRows="False" AutoGenerateColumns="False">
+            <DataGrid x:Name="DgvRaport" CanUserAddRows="False" AutoGenerateColumns="False" Margin="20,0,0,0">
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="0.10*" Header="Id" Binding="{Binding Id}"/>
                     <DataGridTextColumn Width="0.10*" Header="Adı" Binding="{Binding Name}"/>
@@ -24,8 +24,8 @@
         <Label x:Name="LblStartTime" Content="StartTime" HorizontalAlignment="Left" Margin="44,15,0,0" VerticalAlignment="Top"/>
         <DatePicker x:Name="DtpEndTime" HorizontalAlignment="Left" Margin="13,100,0,0" VerticalAlignment="Top" FirstDayOfWeek="Monday"/>
         <Label x:Name="LblEndTime" Content="EndTime" HorizontalAlignment="Left" Margin="40,72,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="BtnSerachInterval" Content="Search Interval" HorizontalAlignment="Left" Margin="14,141,0,0" VerticalAlignment="Top" Height="39" Width="102" Click="BtnSerachInterval_Click"/>
-        <Button x:Name="BtnAllData" Content="Show All Data" HorizontalAlignment="Left" Margin="12,195,0,0" VerticalAlignment="Top" Height="39" Width="102" Click="BtnAllData_Click"/>
+        <Button x:Name="BtnSerachInterval" Content="Search Interval" HorizontalAlignment="Left" Margin="4,142,0,0" VerticalAlignment="Top" Height="40" Width="128" Click="BtnSerachInterval_Click"/>
+        <Button x:Name="BtnAllData" Content="Show All Data" HorizontalAlignment="Left" Margin="8,196,0,0" VerticalAlignment="Top" Height="40" Width="122" Click="BtnAllData_Click"/>
         <Button x:Name="BtnExport" Content="Export" HorizontalAlignment="Left" Margin="9,257,0,0" VerticalAlignment="Top" Height="39" Width="102" Click="BtnExport_Click"/>
 
     </Grid>

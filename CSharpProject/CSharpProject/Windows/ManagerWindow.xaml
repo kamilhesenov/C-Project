@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharpProject.Windows"
         mc:Ignorable="d"
-        Title="ManagerWindow" Height="450" Width="800">
+        Title="ManagerWindow" Height="450" Width="800" WindowState="Maximized">
     <Grid Margin="3,-8,585,8">
         <Label x:Name="LblName" Content="Adı *" HorizontalAlignment="Left" Margin="101,9,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TxtName" HorizontalAlignment="Left" Margin="54,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

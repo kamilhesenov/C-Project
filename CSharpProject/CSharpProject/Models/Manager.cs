@@ -16,7 +16,7 @@ namespace CSharpProject.Models
         [StringLength(50)]
         [EmailAddress]
         public string Email { get; set; }
-       public override string ToString()
+        public override string ToString()
         {
             return Name;
         }

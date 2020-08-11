@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharpProject.Windows"
         mc:Ignorable="d"
-        Title="DashboardWindow" Height="450" Width="800">
+        Title="DashboardWindow" Height="450" Width="800" WindowState="Maximized">
     <Grid>
         <Grid Margin="180,0,0,0">
-            <DataGrid x:Name="DgvBook" CanUserAddRows="False" AutoGenerateColumns="False">
+            <DataGrid x:Name="DgvBook" CanUserAddRows="False" AutoGenerateColumns="False" Margin="0,-2,0,272">
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="0.15*" Header="Id" Binding="{Binding Id}"/>
                     <DataGridTextColumn Width="0.35*" Header="Adı" Binding="{Binding Name}"/>
@@ -16,6 +16,63 @@
                     <DataGridTextColumn Width="0.25*" Header="Sayı" Binding="{Binding Quantity}"/>
                 </DataGrid.Columns>
             </DataGrid>
+            <Grid Margin="0,280,0,0">
+                <TabControl x:Name="products" Margin="0,-110,0,0">
+                    <TabItem x:Name="smartphonesTab">
+                        <TabItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <Ellipse Height="10" Width="10" Fill="Black" />
+                                <TextBlock Margin="3">Bu gun qaytaranlar</TextBlock>
+                            </StackPanel>
+                        </TabItem.Header>
+                        <TabItem.Content>
+                            <StackPanel>
+                                <DataGrid x:Name="DgvTodayReturn" Height="108" CanUserAddRows="False" AutoGenerateColumns="False">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Width="0.25*" Header="Id" Binding="{Binding Id}"/>
+                                        <DataGridTextColumn Width="0.25*" Header="Adı" Binding="{Binding Name}"/>
+                                        <DataGridTextColumn Width="0.25*" Header="Telefon Nomresi" Binding="{Binding Customer.Phone}"/>
+                                        <DataGridTextColumn Width="0.25*" Header="Ustunde nece kitab var" Binding="{Binding Customer.Cart.Count}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+
+                            </StackPanel>
+                        </TabItem.Content>
+                    </TabItem>
+                    <TabItem x:Name="smartphonesTab1">
+                        <TabItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <Ellipse Height="10" Width="10" Fill="Black" />
+                                <TextBlock Margin="3">Sabah Qaytaranlar</TextBlock>
+                            </StackPanel>
+                        </TabItem.Header>
+                        <TabItem.Content>
+                            <StackPanel>
+                                <DataGrid x:Name="DgvTommorrowReturn" Height="120">
+
+                                </DataGrid>
+                            </StackPanel>
+                        </TabItem.Content>
+                    </TabItem>
+                    <TabItem x:Name="tabletsTab">
+                        <TabItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Height="10" Width="10" Fill="Black" />
+                                <TextBlock Margin="3">Gecikenler</TextBlock>
+                            </StackPanel>
+                        </TabItem.Header>
+                        <TabItem.Content>
+                            <StackPanel>
+                                <DataGrid x:Name="DgvDeleyTime" Height="120">
+
+                                </DataGrid>
+                            </StackPanel>
+                        </TabItem.Content>
+                    </TabItem>
+                </TabControl>
+            </Grid>
+            
+
         </Grid>
         <Button x:Name="BtnAddToCart" Content="Add To Cart" HorizontalAlignment="Left" Margin="25,83,0,0" VerticalAlignment="Top" Height="62" Width="125" Click="BtnAddToCart_Click"/>
         <Label x:Name="LblTime" Content="Bitmə Tarixi" HorizontalAlignment="Left" Margin="73,11,0,0" VerticalAlignment="Top"/>
