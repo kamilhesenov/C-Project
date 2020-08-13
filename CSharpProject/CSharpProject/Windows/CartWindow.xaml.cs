@@ -36,7 +36,11 @@ namespace CSharpProject.Windows
         private void BtnDelete_Order_Click(object sender, RoutedEventArgs e)
         {
             Cart cart = (Cart)DgvCart.SelectedItem;
-
+            if (cart == null)
+            {
+                MessageBox.Show("Must select book");
+                return;
+            }
             Book book = _context.Books.FirstOrDefault(x => x.Name == cart.Name);
 
             book.Quantity = book.Quantity + 1; 
